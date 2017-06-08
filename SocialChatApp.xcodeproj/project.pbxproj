@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC6B60711EE993D3007D1D00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60701EE993D3007D1D00 /* AppDelegate.swift */; };
-		DC6B60731EE993D3007D1D00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60721EE993D3007D1D00 /* ViewController.swift */; };
+		902BB278D0516B3F52D5718A /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AB1A3C767EA49F6B16DDCB /* Pods_SocialChatApp.framework */; };
+		DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60701EE993D3007D1D00 /* SMAppDelegate.swift */; };
+		DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60721EE993D3007D1D00 /* SMSignInViewController.swift */; };
 		DC6B60761EE993D3007D1D00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60741EE993D3007D1D00 /* Main.storyboard */; };
 		DC6B60781EE993D3007D1D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60771EE993D3007D1D00 /* Assets.xcassets */; };
 		DC6B607B1EE993D3007D1D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60791EE993D3007D1D00 /* LaunchScreen.storyboard */; };
+		DC6B60831EE994A4007D1D00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243801B157DF222E61DD10B1 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		50C93FFB8F2E49B479F30483 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AB1A3C767EA49F6B16DDCB /* Pods_SocialChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6B606D1EE993D3007D1D00 /* SocialChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC6B60701EE993D3007D1D00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC6B60721EE993D3007D1D00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC6B60701EE993D3007D1D00 /* SMAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMAppDelegate.swift; sourceTree = "<group>"; };
+		DC6B60721EE993D3007D1D00 /* SMSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSignInViewController.swift; sourceTree = "<group>"; };
 		DC6B60751EE993D3007D1D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC6B60771EE993D3007D1D00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC6B607A1EE993D3007D1D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC6B607C1EE993D3007D1D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902BB278D0516B3F52D5718A /* Pods_SocialChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ACA76F9EECFC0B7F87C0B45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50C93FFB8F2E49B479F30483 /* Pods-SocialChatApp.debug.xcconfig */,
+				243801B157DF222E61DD10B1 /* Pods-SocialChatApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA4013C6C3DE97FB3B0CFC08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0AB1A3C767EA49F6B16DDCB /* Pods_SocialChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC6B60641EE993D3007D1D00 = {
 			isa = PBXGroup;
 			children = (
 				DC6B606F1EE993D3007D1D00 /* SocialChatApp */,
 				DC6B606E1EE993D3007D1D00 /* Products */,
+				8ACA76F9EECFC0B7F87C0B45 /* Pods */,
+				AA4013C6C3DE97FB3B0CFC08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		DC6B606F1EE993D3007D1D00 /* SocialChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC6B60701EE993D3007D1D00 /* AppDelegate.swift */,
-				DC6B60721EE993D3007D1D00 /* ViewController.swift */,
+				DC6B60861EE9968D007D1D00 /* Controller */,
+				DC6B60851EE99688007D1D00 /* View */,
+				DC6B60841EE99680007D1D00 /* Model */,
+				DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */,
+				DC6B60701EE993D3007D1D00 /* SMAppDelegate.swift */,
 				DC6B60741EE993D3007D1D00 /* Main.storyboard */,
 				DC6B60771EE993D3007D1D00 /* Assets.xcassets */,
 				DC6B60791EE993D3007D1D00 /* LaunchScreen.storyboard */,
 				DC6B607C1EE993D3007D1D00 /* Info.plist */,
 			);
 			path = SocialChatApp;
+			sourceTree = "<group>";
+		};
+		DC6B60841EE99680007D1D00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DC6B60851EE99688007D1D00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DC6B60861EE9968D007D1D00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC6B60721EE993D3007D1D00 /* SMSignInViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC6B607F1EE993D3007D1D00 /* Build configuration list for PBXNativeTarget "SocialChatApp" */;
 			buildPhases = (
+				E41B3C131AA8A0380D8E91CF /* [CP] Check Pods Manifest.lock */,
 				DC6B60691EE993D3007D1D00 /* Sources */,
 				DC6B606A1EE993D3007D1D00 /* Frameworks */,
 				DC6B606B1EE993D3007D1D00 /* Resources */,
+				C654134678B7FA4B8A85D261 /* [CP] Embed Pods Frameworks */,
+				E0AC2B433602EB39FE286F26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +150,7 @@
 				TargetAttributes = {
 					DC6B606C1EE993D3007D1D00 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4PMQKT6K8N;
+						DevelopmentTeam = RLMXU9393M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6B607B1EE993D3007D1D00 /* LaunchScreen.storyboard in Resources */,
+				DC6B60831EE994A4007D1D00 /* GoogleService-Info.plist in Resources */,
 				DC6B60781EE993D3007D1D00 /* Assets.xcassets in Resources */,
 				DC6B60761EE993D3007D1D00 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +187,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C654134678B7FA4B8A85D261 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0AC2B433602EB39FE286F26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E41B3C131AA8A0380D8E91CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC6B60691EE993D3007D1D00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6B60731EE993D3007D1D00 /* ViewController.swift in Sources */,
-				DC6B60711EE993D3007D1D00 /* AppDelegate.swift in Sources */,
+				DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */,
+				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +362,14 @@
 		};
 		DC6B60801EE993D3007D1D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C93FFB8F2E49B479F30483 /* Pods-SocialChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.SocialChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "XC-SocialChatApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +377,14 @@
 		};
 		DC6B60811EE993D3007D1D00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 243801B157DF222E61DD10B1 /* Pods-SocialChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.SocialChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "XC-SocialChatApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +409,7 @@
 				DC6B60811EE993D3007D1D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
