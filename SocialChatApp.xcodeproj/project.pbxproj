@@ -14,6 +14,7 @@
 		DC6B60781EE993D3007D1D00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60771EE993D3007D1D00 /* Assets.xcassets */; };
 		DC6B607B1EE993D3007D1D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60791EE993D3007D1D00 /* LaunchScreen.storyboard */; };
 		DC6B60831EE994A4007D1D00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */; };
+		DC6B60921EEB16B2007D1D00 /* SMCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DC6B607A1EE993D3007D1D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC6B607C1EE993D3007D1D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		DC6B60851EE99688007D1D00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */,
 				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
+				DC6B60921EEB16B2007D1D00 /* SMCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
