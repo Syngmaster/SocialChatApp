@@ -15,6 +15,9 @@
 		DC6B607B1EE993D3007D1D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60791EE993D3007D1D00 /* LaunchScreen.storyboard */; };
 		DC6B60831EE994A4007D1D00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */; };
 		DC6B60921EEB16B2007D1D00 /* SMCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */; };
+		DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60951EEB178F007D1D00 /* SMConstants.swift */; };
+		DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */; };
+		DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,10 @@
 		DC6B607C1EE993D3007D1D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6B60821EE994A4007D1D00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomView.swift; sourceTree = "<group>"; };
+		DC6B60931EEB1726007D1D00 /* SocialChatApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialChatApp.entitlements; sourceTree = "<group>"; };
+		DC6B60951EEB178F007D1D00 /* SMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConstants.swift; sourceTree = "<group>"; };
+		DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomButton.swift; sourceTree = "<group>"; };
+		DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,8 @@
 		DC6B606F1EE993D3007D1D00 /* SocialChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC6B60941EEB176A007D1D00 /* Util */,
+				DC6B60931EEB1726007D1D00 /* SocialChatApp.entitlements */,
 				DC6B60861EE9968D007D1D00 /* Controller */,
 				DC6B60851EE99688007D1D00 /* View */,
 				DC6B60841EE99680007D1D00 /* Model */,
@@ -106,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */,
+				DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */,
+				DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -116,6 +127,14 @@
 				DC6B60721EE993D3007D1D00 /* SMSignInViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		DC6B60941EEB176A007D1D00 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DC6B60951EEB178F007D1D00 /* SMConstants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = RLMXU9393M;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -244,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */,
+				DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */,
+				DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */,
+				DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */,
 				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
 				DC6B60921EEB16B2007D1D00 /* SMCustomView.swift in Sources */,
 			);
@@ -369,6 +396,7 @@
 			baseConfigurationReference = 50C93FFB8F2E49B479F30483 /* Pods-SocialChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialChatApp/SocialChatApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
@@ -384,6 +412,7 @@
 			baseConfigurationReference = 243801B157DF222E61DD10B1 /* Pods-SocialChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialChatApp/SocialChatApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RLMXU9393M;
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
