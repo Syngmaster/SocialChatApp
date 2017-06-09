@@ -12,6 +12,10 @@ import Firebase
 
 class SMSignInViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: SMCustomTextField!
+    @IBOutlet weak var passwordTextField: SMCustomTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -53,5 +57,26 @@ class SMSignInViewController: UIViewController {
         
     }
 
+    @IBAction func signInAction(_ sender: UIButton) {
+        
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                    print("Syngmaster: Email user authenticated with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("Syngmaster: Unable to authenticate with Firebase using email - \(error)")
+                        } else {
+                            print("Syngmaster: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+        
+        
+    }
 }
 
