@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SMSignInViewController: UIViewController {
 
@@ -18,12 +19,12 @@ class SMSignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: "uid") {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     @IBAction func facebookSignInAction(_ sender: UIButton) {
@@ -51,11 +52,13 @@ class SMSignInViewController: UIViewController {
                 print("Syngmaster: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("Syngmaster: Successfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
-        
-        
     }
+    
 
     @IBAction func signInAction(_ sender: UIButton) {
         
@@ -64,19 +67,30 @@ class SMSignInViewController: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("Syngmaster: Email user authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("Syngmaster: Unable to authenticate with Firebase using email - \(error)")
                         } else {
                             print("Syngmaster: Successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
-        
-        
+    }
+    
+    
+    func completeSignIn(id: String) {
+        let result = KeychainWrapper.standard.set(id, forKey: "uid")
+        print("Data saved - \(result)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 

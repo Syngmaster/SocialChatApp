@@ -18,6 +18,7 @@
 		DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60951EEB178F007D1D00 /* SMConstants.swift */; };
 		DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */; };
 		DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */; };
+		DC6B609C1EEEEAB1007D1D00 /* SMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DC6B60951EEB178F007D1D00 /* SMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConstants.swift; sourceTree = "<group>"; };
 		DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomButton.swift; sourceTree = "<group>"; };
 		DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomTextField.swift; sourceTree = "<group>"; };
+		DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DC6B60721EE993D3007D1D00 /* SMSignInViewController.swift */,
+				DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */,
 				DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */,
+				DC6B609C1EEEEAB1007D1D00 /* SMFeedViewController.swift in Sources */,
 				DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */,
 				DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */,
 				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
