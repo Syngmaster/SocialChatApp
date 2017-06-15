@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-iK-qgq" customClass="SMCustomView" customModule="SocialChatApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RAW-4P-Nsi">
-                                        <rect key="frame" x="8" y="14" width="304" height="128"/>
+                                        <rect key="frame" x="8" y="14" width="359" height="128"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,10 +39,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-S1-J5l">
-                                <rect key="frame" x="0.0" y="405" width="320" height="75"/>
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in before, an account will be automatically created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5id-46-KVv">
-                                        <rect key="frame" x="8" y="8" width="304" height="59"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-JW-XN1">
-                                <rect key="frame" x="16" y="170" width="288" height="35"/>
+                                <rect key="frame" x="16" y="170" width="343" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="VtP-a6-9cy"/>
                                 </constraints>
@@ -67,10 +67,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="q6h-G4-eDI">
-                                <rect key="frame" x="36" y="235" width="248" height="130"/>
+                                <rect key="frame" x="36" y="235" width="303" height="317"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ayJ-VD-Sbf" customClass="SMCustomButton" customModule="SocialChatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="146"/>
                                         <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Sign in with Facebook account">
@@ -81,22 +81,22 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rYu-ck-S6T">
-                                        <rect key="frame" x="0.0" y="77.5" width="248" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="171" width="303" height="146"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-yc-o1a" customClass="SMCustomTextField" customModule="SocialChatApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="248" height="11"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="42"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-L4-0jY" customClass="SMCustomTextField" customModule="SocialChatApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="21" width="248" height="10.5"/>
+                                                <rect key="frame" x="0.0" y="52" width="303" height="42"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="join" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTc-MA-vaz" customClass="SMCustomButton" customModule="SocialChatApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="41.5" width="248" height="11"/>
+                                                <rect key="frame" x="0.0" y="104" width="303" height="42"/>
                                                 <color key="backgroundColor" red="0.98431372549019602" green="0.073504673650983107" blue="0.041784862088315201" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                 <state key="normal" title="Sign in">
@@ -147,11 +147,11 @@
                         <viewControllerLayoutGuide type="bottom" id="8V5-o1-F0m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UQc-Aq-lcA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbN-qy-Paa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-rU-sc7">
                                         <rect key="frame" x="8" y="24" width="50" height="38"/>
@@ -160,9 +160,12 @@
                                             <constraint firstAttribute="width" constant="50" id="csD-av-piU"/>
                                         </constraints>
                                         <state key="normal" image="sign-out"/>
+                                        <connections>
+                                            <action selector="signOutAction:" destination="ZeQ-zP-gUO" eventType="touchUpInside" id="l6M-66-CPO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-go-Eyh">
-                                        <rect key="frame" x="137.5" y="29.5" width="46" height="27.5"/>
+                                        <rect key="frame" x="165" y="29.5" width="46" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -178,10 +181,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ku3-WO-9aA" customClass="SMCustomView" customModule="SocialChatApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="86" width="288" height="65"/>
+                                <rect key="frame" x="16" y="86" width="343" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4H5-e3-Hvh">
-                                        <rect key="frame" x="8" y="8" width="272" height="49"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="CAx-WH-dma" customClass="SMCustomCircleImageView" customModule="SocialChatApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
@@ -191,13 +194,13 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-Fc-KaP">
-                                                <rect key="frame" x="54" y="0.0" width="164" height="49"/>
+                                                <rect key="frame" x="54" y="0.0" width="219" height="49"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXd-BG-MvA">
-                                                <rect key="frame" x="223" y="0.0" width="49" height="49"/>
+                                                <rect key="frame" x="278" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.98431372549999996" green="0.073504673650000005" blue="0.04178486209" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="sYk-IA-9xW"/>
@@ -216,22 +219,22 @@
                                     <constraint firstAttribute="height" constant="65" id="yZu-SA-wJd"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="331" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="64S-7D-u59">
-                                <rect key="frame" x="0.0" y="167" width="320" height="313"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="331" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="64S-7D-u59">
+                                <rect key="frame" x="0.0" y="167" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="331" id="nIR-Uw-v5C">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="331"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="331" id="nIR-Uw-v5C" customClass="SMPostCell" customModule="SocialChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="331"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nIR-Uw-v5C" id="o0c-D1-0Hp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="331"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Jw-44v" customClass="SMCustomView" customModule="SocialChatApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="288" height="314"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="315"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9JN-Pg-wzB">
-                                                            <rect key="frame" x="194.5" y="282.5" width="85.5" height="23.5"/>
+                                                            <rect key="frame" x="249.5" y="283.5" width="85.5" height="23.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-69-XJs">
                                                                     <rect key="frame" x="0.0" y="0.0" width="37.5" height="23.5"/>
@@ -248,25 +251,25 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JD5-hm-lOO">
-                                                            <rect key="frame" x="8" y="8" width="272" height="251"/>
+                                                            <rect key="frame" x="8" y="8" width="327" height="252"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5k4-AV-6Rl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="65"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="65"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-kk-AJ5">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-kk-AJ5" customClass="SMCustomCircleImageView" customModule="SocialChatApp" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="65" id="lsU-Jt-tBc"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGz-oA-nKb">
-                                                                            <rect key="frame" x="65" y="0.0" width="142" height="65"/>
+                                                                            <rect key="frame" x="65" y="0.0" width="197" height="65"/>
                                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="ht3-Vh-n4R">
-                                                                            <rect key="frame" x="207" y="0.0" width="65" height="65"/>
+                                                                            <rect key="frame" x="262" y="0.0" width="65" height="65"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="65" id="gxJ-3E-yfN"/>
                                                                             </constraints>
@@ -277,10 +280,10 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="srH-Cy-S9P">
-                                                                    <rect key="frame" x="0.0" y="70" width="272" height="100"/>
+                                                                    <rect key="frame" x="0.0" y="70" width="327" height="101"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-PN-5AD">
-                                                                    <rect key="frame" x="0.0" y="175" width="272" height="76"/>
+                                                                    <rect key="frame" x="0.0" y="176" width="327" height="76"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="76" id="QpZ-Bg-zms"/>
@@ -299,7 +302,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="JD5-hm-lOO" firstAttribute="top" secondItem="3W2-Jw-44v" secondAttribute="top" constant="8" id="LGP-1v-o24"/>
                                                         <constraint firstAttribute="bottom" secondItem="JD5-hm-lOO" secondAttribute="bottom" constant="55" id="MNn-45-4Bw"/>
@@ -310,6 +313,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="3W2-Jw-44v" secondAttribute="trailing" constant="16" id="QBa-DJ-5Ep"/>
                                                 <constraint firstAttribute="bottom" secondItem="3W2-Jw-44v" secondAttribute="bottom" constant="8" id="Ywx-Pa-Rbl"/>
@@ -317,11 +321,18 @@
                                                 <constraint firstItem="3W2-Jw-44v" firstAttribute="top" secondItem="o0c-D1-0Hp" secondAttribute="top" constant="8" id="zgt-a3-6tW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionText" destination="fCb-PN-5AD" id="Tzn-H8-2dg"/>
+                                            <outlet property="likesLabel" destination="xhx-EG-VMS" id="hZt-HX-gET"/>
+                                            <outlet property="postImage" destination="srH-Cy-S9P" id="Edg-tX-3yD"/>
+                                            <outlet property="profileImage" destination="gAU-kk-AJ5" id="ORs-xH-cOj"/>
+                                            <outlet property="userNameLabel" destination="JGz-oA-nKb" id="bzH-5a-0Zm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ku3-WO-9aA" firstAttribute="trailing" secondItem="UQc-Aq-lcA" secondAttribute="trailingMargin" id="8BL-Tq-ZnT"/>
                             <constraint firstItem="YbN-qy-Paa" firstAttribute="top" secondItem="UQc-Aq-lcA" secondAttribute="top" id="9Dv-Ec-Qwa"/>

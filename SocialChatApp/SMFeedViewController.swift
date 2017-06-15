@@ -18,8 +18,8 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         self.navigationItem.title = "Feeds"
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
     }
 
@@ -38,8 +38,7 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //let cell = UITableViewCell.init(style: <#T##UITableViewCellStyle#>, reuseIdentifier: <#T##String?#>)
-        
+        return tableView.dequeueReusableCell(withIdentifier: "Cell") as! SMPostCell
     }
     
 }

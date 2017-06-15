@@ -19,6 +19,7 @@ class SMSignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +54,8 @@ class SMSignInViewController: UIViewController {
             } else {
                 print("Syngmaster: Successfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider" : credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
@@ -68,7 +70,8 @@ class SMSignInViewController: UIViewController {
                 if error == nil {
                     print("Syngmaster: Email user authenticated with Firebase")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider" : user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -77,7 +80,8 @@ class SMSignInViewController: UIViewController {
                         } else {
                             print("Syngmaster: Successfully authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider" : user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -87,7 +91,10 @@ class SMSignInViewController: UIViewController {
     }
     
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        
+        DataService.sharedInstance.createFirebaseDBUser(uid: id, userData: userData)
+        
         let result = KeychainWrapper.standard.set(id, forKey: "uid")
         print("Data saved - \(result)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
