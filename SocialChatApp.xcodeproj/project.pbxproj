@@ -21,7 +21,8 @@
 		DC6B609C1EEEEAB1007D1D00 /* SMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */; };
 		DC6B609E1EF294FA007D1D00 /* SMCustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B609D1EF294FA007D1D00 /* SMCustomCircleImageView.swift */; };
 		DC6B60BC1EF2C4DB007D1D00 /* SMPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60BB1EF2C4DB007D1D00 /* SMPostCell.swift */; };
-		DC6B60BF1EF2D4A8007D1D00 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60BE1EF2D4A8007D1D00 /* DataService.swift */; };
+		DC6B60BF1EF2D4A8007D1D00 /* SMDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60BE1EF2D4A8007D1D00 /* SMDataService.swift */; };
+		DC6B60C11EF2E968007D1D00 /* SMPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60C01EF2E968007D1D00 /* SMPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,8 @@
 		DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMFeedViewController.swift; sourceTree = "<group>"; };
 		DC6B609D1EF294FA007D1D00 /* SMCustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomCircleImageView.swift; sourceTree = "<group>"; };
 		DC6B60BB1EF2C4DB007D1D00 /* SMPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPostCell.swift; sourceTree = "<group>"; };
-		DC6B60BE1EF2D4A8007D1D00 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		DC6B60BE1EF2D4A8007D1D00 /* SMDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDataService.swift; sourceTree = "<group>"; };
+		DC6B60C01EF2E968007D1D00 /* SMPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		DC6B60841EE99680007D1D00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DC6B60C01EF2E968007D1D00 /* SMPost.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,7 +155,7 @@
 		DC6B60BD1EF2D49B007D1D00 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DC6B60BE1EF2D4A8007D1D00 /* DataService.swift */,
+				DC6B60BE1EF2D4A8007D1D00 /* SMDataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -295,8 +298,9 @@
 				DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */,
 				DC6B60BC1EF2C4DB007D1D00 /* SMPostCell.swift in Sources */,
 				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
+				DC6B60C11EF2E968007D1D00 /* SMPost.swift in Sources */,
 				DC6B60921EEB16B2007D1D00 /* SMCustomView.swift in Sources */,
-				DC6B60BF1EF2D4A8007D1D00 /* DataService.swift in Sources */,
+				DC6B60BF1EF2D4A8007D1D00 /* SMDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
