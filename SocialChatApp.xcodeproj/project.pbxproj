@@ -19,6 +19,7 @@
 		DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */; };
 		DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */; };
 		DC6B609C1EEEEAB1007D1D00 /* SMFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */; };
+		DC6B609E1EF294FA007D1D00 /* SMCustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6B609D1EF294FA007D1D00 /* SMCustomCircleImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomButton.swift; sourceTree = "<group>"; };
 		DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomTextField.swift; sourceTree = "<group>"; };
 		DC6B609B1EEEEAB1007D1D00 /* SMFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMFeedViewController.swift; sourceTree = "<group>"; };
+		DC6B609D1EF294FA007D1D00 /* SMCustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMCustomCircleImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				DC6B60911EEB16B2007D1D00 /* SMCustomView.swift */,
 				DC6B60971EEB1885007D1D00 /* SMCustomButton.swift */,
 				DC6B60991EEB1931007D1D00 /* SMCustomTextField.swift */,
+				DC6B609D1EF294FA007D1D00 /* SMCustomCircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				DC6B60731EE993D3007D1D00 /* SMSignInViewController.swift in Sources */,
 				DC6B60981EEB1885007D1D00 /* SMCustomButton.swift in Sources */,
 				DC6B609C1EEEEAB1007D1D00 /* SMFeedViewController.swift in Sources */,
+				DC6B609E1EF294FA007D1D00 /* SMCustomCircleImageView.swift in Sources */,
 				DC6B609A1EEB1931007D1D00 /* SMCustomTextField.swift in Sources */,
 				DC6B60961EEB178F007D1D00 /* SMConstants.swift in Sources */,
 				DC6B60711EE993D3007D1D00 /* SMAppDelegate.swift in Sources */,
@@ -403,6 +407,24 @@
 				CODE_SIGN_ENTITLEMENTS = SocialChatApp/SocialChatApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RLMXU9393M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Bolts\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBSDKCoreKit\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBSDKLoginKit\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SwiftKeychainWrapper\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XC-SocialChatApp";
@@ -419,6 +441,24 @@
 				CODE_SIGN_ENTITLEMENTS = SocialChatApp/SocialChatApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RLMXU9393M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Bolts\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBSDKCoreKit\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/FBSDKLoginKit\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SwiftKeychainWrapper\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = SocialChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XC-SocialChatApp";
