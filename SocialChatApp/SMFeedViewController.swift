@@ -10,11 +10,13 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImage: SMCustomCircleImageView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,10 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationItem.title = "Feeds"
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataService.sharedInstance.REF_POSTS.observe(.value, with: {(snapshot) in
             
@@ -51,6 +57,23 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    @IBAction func addImageAction(_ sender: Any) {
+        print("123456")
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("Invalid photo is chosen!")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -60,9 +83,14 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let post = posts[indexPath.row]
-        print("\(post.caption)")
-        
-        return tableView.dequeueReusableCell(withIdentifier: "Cell") as! SMPostCell
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? SMPostCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return SMPostCell()
+        }
+
     }
     
 }

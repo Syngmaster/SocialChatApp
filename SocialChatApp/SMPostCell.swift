@@ -17,6 +17,8 @@ class SMPostCell: UITableViewCell {
     @IBOutlet weak var captionText: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +28,13 @@ class SMPostCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(post: Post) {
+        self.post = post
+        self.captionText.text = post.caption
+        self.likesLabel.text = "\(post.likes)"
+        
     }
 
 }
