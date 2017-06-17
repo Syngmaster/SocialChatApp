@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SMPostCell: UITableViewCell {
     
@@ -30,10 +31,32 @@ class SMPostCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(post: Post) {
+    func configureCell(post: Post, image: UIImage? = nil) {
         self.post = post
         self.captionText.text = post.caption
         self.likesLabel.text = "\(post.likes)"
+        
+        if image != nil {
+            self.postImage.image = image
+        } else {
+            let reference = FIRStorage.storage().reference(forURL: post.imageURL)
+            reference.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error) in
+                
+                if error != nil {
+                    print("Syngmaster: Unable to download from Firebase Storage")
+                } else {
+                    print("Syngmaster: Image downloaded from Firebase Storage")
+                    if let imageData = data {
+                        if let image = UIImage(data: imageData) {
+                            self.postImage.image = image
+                            SMFeedViewController.imageCache.setObject(image, forKey: post.imageURL as NSString)
+                        }
+                    }
+                }
+                
+            })
+            
+        }
         
     }
 

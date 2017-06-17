@@ -17,6 +17,7 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,6 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func addImageAction(_ sender: Any) {
-        print("123456")
         present(imagePicker, animated: true, completion: nil)
         
     }
@@ -85,8 +85,17 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let post = posts[indexPath.row]
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? SMPostCell {
-            cell.configureCell(post: post)
-            return cell
+            
+            
+            if let image = SMFeedViewController.imageCache.object(forKey: post.imageURL as NSString) {
+                cell.configureCell(post: post, image: image)
+                return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
+            
+
         } else {
             return SMPostCell()
         }
