@@ -89,9 +89,31 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 } else {
                     print("Syngmaster: Image successfully uploaded")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imageURL: url)
+                    }
                 }
             }
         }
+        
+        
+        tableView.reloadData()
+    }
+    
+    
+    func postToFirebase(imageURL: String) {
+        let post: Dictionary <String, Any> = [
+            "caption" : captionTextField.text!,
+            "imageURL" : imageURL,
+            "likes" : 0
+        ]
+        
+        let firebasePost = DataService.sharedInstance.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionTextField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
     }
     
     

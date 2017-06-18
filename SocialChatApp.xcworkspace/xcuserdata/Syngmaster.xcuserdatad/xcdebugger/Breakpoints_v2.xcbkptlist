@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialChatApp/SMPostCell.swift"
-            timestampString = "519410361.712698"
+            timestampString = "519498729.921565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "configureCell(post:image:)"
             landmarkType = "7">
          </BreakpointContent>

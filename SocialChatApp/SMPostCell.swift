@@ -17,12 +17,19 @@ class SMPostCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var captionText: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
-    
+    @IBOutlet weak var likeImage: UIImageView!
+
     var post: Post!
-    
+    var likesReference: FIRDatabaseReference!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeAction))
+        tap.numberOfTapsRequired = 1
+        likeImage.addGestureRecognizer(tap)
+        likeImage.isUserInteractionEnabled = true
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,7 +39,9 @@ class SMPostCell: UITableViewCell {
     }
     
     func configureCell(post: Post, image: UIImage? = nil) {
+        
         self.post = post
+        likesReference = DataService.sharedInstance.REF_USER_CURRENT.child("likes").child(post.postID)
         self.captionText.text = post.caption
         self.likesLabel.text = "\(post.likes)"
         
@@ -53,11 +62,36 @@ class SMPostCell: UITableViewCell {
                         }
                     }
                 }
-                
             })
-            
         }
         
+        likesReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeImage.image = UIImage(named: "empty-heart")
+            } else {
+                self.likeImage.image = UIImage(named: "filled-heart")
+            }
+            
+        })
     }
 
+    
+    func likeAction(sender: UITapGestureRecognizer) {
+        var likesReference = DataService.sharedInstance.REF_USER_CURRENT.child("likes")
+        likesReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeImage.image = UIImage(named: "filled-heart")
+                self.post.adjustLikes(addLike: true)
+                self.likesReference.setValue(true)
+            } else {
+                self.likeImage.image = UIImage(named: "empty-heart")
+                self.post.adjustLikes(addLike: false)
+                self.likesReference.removeValue()
+            }
+            
+        })
+    }
+    
 }
