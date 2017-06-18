@@ -14,10 +14,12 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: SMCustomCircleImageView!
+    @IBOutlet weak var captionTextField: UITextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +65,40 @@ class SMFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    @IBAction func postAction(_ sender: SMCustomButton) {
+        guard let caption = captionTextField.text, caption != "" else {
+            print("Syngmaster: Caption must be entered")
+            return
+        }
+        
+        guard let image = addImage.image, imageSelected == true else {
+            print("Syngmaster: An image must be selected")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            
+            let imageUID = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.sharedInstance.REF_POST_IMAGES.child(imageUID).put(imageData, metadata: metadata) { (metadata, error) in
+                
+                if error != nil {
+                    print("Syngmaster: Unable to upload image to FIRStorage")
+                } else {
+                    print("Syngmaster: Image successfully uploaded")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("Invalid photo is chosen!")
         }
